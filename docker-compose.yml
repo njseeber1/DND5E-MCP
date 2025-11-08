@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  dnd5e-mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dnd5e-mcp:latest
+    container_name: dnd5e-Server
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - mcp-network
+    # For stdio communication, map stdin/stdout
+    # No ports needed as MCP uses stdio
+
+networks:
+  mcp-network:
+    driver: bridge

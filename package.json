@@ -1,0 +1,33 @@
+{
+    "name": "dnd5e-mcp-server",
+    "version": "1.0.0",
+    "description": "Model Context Protocol server for D&D 5e API",
+    "type": "module",
+    "main": "dist/server.js",
+    "bin": {
+      "dnd5e-mcp-server": "./dist/server.js"
+    },
+    "scripts": {
+      "build": "tsc",
+      "start": "node dist/server.js",
+      "dev": "tsc && node dist/server.js",
+      "prepare": "npm run build"
+    },
+    "keywords": [
+      "mcp",
+      "dnd",
+      "dungeons-and-dragons",
+      "5e",
+      "api"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "@modelcontextprotocol/sdk": "^1.0.4",
+      "axios": "^1.7.9"
+    },
+    "devDependencies": {
+      "@types/node": "^22.10.2",
+      "typescript": "^5.7.2"
+    }
+  }
