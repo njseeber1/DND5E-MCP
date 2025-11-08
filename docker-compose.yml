@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: dnd5e-mcp:latest
+    image: dnd5e-mcp-server:latest
     container_name: dnd5e-Server
     stdin_open: true
     tty: true
